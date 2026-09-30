@@ -17,15 +17,8 @@ Pendekatan kami berakar pada prinsip **engineering-first**: kami memulai setiap 
 | Parameter | Keterangan Resmi |
 | :--- | :--- |
 | **Nama Badan Usaha** | PT Aegis Teknologi Nusantara |
-| **Bentuk Entitas** | Perseroan Terbatas (PT) |
-| **Direktur** | Dhea Retnoningsih, A.Md.Si., S.T |
-| **Komisaris** | M. Hafizh Maulana |
-| **Nomor Induk Berusaha (NIB)** | `0308260004981` |
-| **NPWP** | `1000 0000 1059 9988` |
 | **Bidang Usaha Utama** | Konsultansi rekayasa MRO, reliability engineering, managed monitoring, digital MRO, condition monitoring, software, IoT, dan analitik berbasis AI |
-| **Kantor Terdaftar (Domisili)** | Kp. Bolang 2 RT 007 RW 002, Desa Cibuluh, Kec. Tanjungsiang, Kab. Subang, Jawa Barat 41284 |
-| **Kantor Operasional Jakarta** | Infiniti Office Bellezza - Bellezza BSA, 1st Floor Unit 106, Jl. Letjen Soepeno, Grogol Utara, Kebayoran Lama, Jakarta Selatan 12210 |
-| **Kontak Resmi** | Telepon: `+62 823 2300 2396` / `+62 853 5876 9960`<br>Email: `aegisteknologinusantara@gmail.com` |
+
 
 ---
 
