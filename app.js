@@ -484,9 +484,9 @@
        ═══════════════════════════════════════════════════════════════════════ */
 
     function initTheme() {
-        const saved = localStorage.getItem("aegis_theme");
-        const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = saved || (prefersDark ? "dark" : "light");
+        // Default is light theme (clean corporate presentation default)
+        const saved = localStorage.getItem("aegis_theme_mode");
+        const theme = saved === "dark" ? "dark" : "light";
         setTheme(theme);
 
         document.querySelectorAll(".theme-toggle-btn").forEach((btn) => {
@@ -502,11 +502,12 @@
         const root = document.documentElement;
         if (theme === "dark") {
             root.setAttribute("data-theme", "dark");
-            localStorage.setItem("aegis_theme", "dark");
+            localStorage.setItem("aegis_theme_mode", "dark");
         } else {
             root.removeAttribute("data-theme");
-            localStorage.setItem("aegis_theme", "light");
+            localStorage.setItem("aegis_theme_mode", "light");
         }
+        localStorage.removeItem("aegis_theme");
 
         // Update toggle icons
         document.querySelectorAll(".theme-icon-sun").forEach((el) => {
