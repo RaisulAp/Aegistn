@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Aegis">
+  <!--
+    FALLBACK FAVICON ONLY — not the brand asset.
+
+    The real favicon comes from the CMS (`branding_settings.favicon_media_id`)
+    and is swapped in at runtime by BrandingContext. This file is what a browser
+    shows for the instant before that API answers, and what appears if the client
+    has not uploaded one.
+
+    It is deliberately a MARK, not a wordmark or letterform: a monogram would
+    bake a specific company's initial into every deployment of this template
+    (Prinsip 5). A shield — "aegis" — is a generic, honest placeholder.
+
+    Colours are the two Aegis brand values from _ops/DECISIONS.md §1, matching
+    the --brand-primary / --brand-accent fallbacks in tokens.css. A client who
+    re-themes the CMS replaces this file's job entirely.
+  -->
+  <rect width="32" height="32" rx="6" fill="#002454" />
+  <path
+    d="M10 7 L22 7 L22 16.5 Q22 22 16 26.5 Q10 22 10 16.5 Z"
+    fill="none"
+    stroke="#00788F"
+    stroke-width="1.75"
+    stroke-linejoin="round"
+  />
+</svg>
