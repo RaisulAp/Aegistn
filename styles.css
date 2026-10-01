@@ -135,11 +135,11 @@
     --tag-navy-bg: rgb(0 36 84 / 0.08);
     --tag-navy-fg: var(--navy-700);
 
-    /* ---- Radius: near-square. Technical, not friendly. -------------------- */
-    --r-xs: 2px;
-    --r-sm: 3px;
-    --r: 4px;
-    --r-lg: 6px;
+    /* ---- Radius: modern soft curves (sebelumnya 2px-4px yang kaku) ---- */
+    --r-xs: 6px;
+    --r-sm: 10px;
+    --r: 14px;
+    --r-lg: 18px;
     --r-pill: 999px;
 
     /* ---- Spacing rhythm --------------------------------------------------- */
@@ -1341,27 +1341,34 @@ button.chip:hover {
 
 .mission-list li {
     display: grid;
-    grid-template-columns: 54px minmax(0, 1fr);
-    gap: var(--space-4);
-    padding-block: 18px;
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: var(--space-3);
+    padding-block: 16px;
     border-bottom: 1px solid var(--sec-line);
     font-size: var(--fs-sm);
     line-height: var(--lh-md);
     color: var(--sec-fg-muted);
-    counter-increment: mission;
+    transition: color var(--dur-1) var(--ease-out);
+}
+
+.mission-list li:hover {
+    color: var(--ink);
 }
 
 .mission-list li::before {
-    content: counter(mission, decimal-leading-zero);
-    font-family: var(--font-mono);
-    font-size: var(--fs-xs);
-    font-weight: 600;
-    color: var(--sec-accent);
-    font-variant-numeric: tabular-nums;
+    content: "";
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    background-color: var(--sec-accent);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    transition: background-color var(--dur-1) var(--ease-out), transform var(--dur-1) var(--ease-out);
 }
 
-.mission-list {
-    counter-reset: mission;
+.mission-list li:hover::before {
+    background-color: var(--brand-accent);
+    transform: scale(1.15);
 }
 
 .scope-list {
