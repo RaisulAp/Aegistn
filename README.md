@@ -1,160 +1,268 @@
-# PT Aegis Teknologi Nusantara
-> **Technology-Enabled MRO, Reliability, and Asset Monitoring**  
+# PT Aegis Teknologi Nusantara — Company Profile (Mockup)
+
+> **Technology-Enabled MRO, Reliability, and Asset Monitoring**
 > *From Research to Real Solutions*
 
----
-
-## 📌 Tentang Perusahaan
-
-**PT Aegis Teknologi Nusantara (Aegis)** adalah perusahaan konsultan rekayasa MRO (*Maintenance, Repair, and Overhaul*) dan manajemen keandalan aset (*reliability engineering*) yang membantu perusahaan maritim dan industri proses meningkatkan keselamatan kerja, kesiapan teknis (*technical availability*), dan efisiensi biaya operasional.
-
-Pendekatan kami berakar pada prinsip **engineering-first**: kami memulai setiap proyek dari fungsi fisik aset, analisis kritikalitas (*criticality*), pola kegagalan (*failure modes*), kondisi operasi riil, dan data lapangan. Setelah fondasi rekayasa terbentuk kokoh, sistem digital pemeliharaan, IoT, dan analitik cerdas dirancang sesuai kebutuhan spesifik operasional klien.
+An interactive, presentation-ready company profile built as a **zero-dependency
+static site**: open `index.html` in a browser and everything works. No build
+step, no framework, no runtime Node.
 
 ---
 
-## 🏛️ Identitas & Legalitas Perusahaan
+## Running it
 
-| Parameter | Keterangan Resmi |
-| :--- | :--- |
-| **Nama Badan Usaha** | PT Aegis Teknologi Nusantara |
-| **Bidang Usaha Utama** | Konsultansi rekayasa MRO, reliability engineering, managed monitoring, digital MRO, condition monitoring, software, IoT, dan analitik berbasis AI |
-
-
----
-
-## 🎯 Visi & Misi
-
-### Visi
-> *"Menjadi mitra terpercaya dalam penyediaan solusi MRO dan keandalan aset berbasis teknologi untuk meningkatkan keselamatan, kesiapan operasi, produktivitas, dan daya saing industri maritim serta berbagai sektor usaha di Indonesia."*
-
-### Misi
-1. **Objektif & Berbasis Risiko:** Menyediakan konsultansi rekayasa MRO dan *reliability engineering* yang objektif, berbasis risiko, dan dapat dipertanggungjawabkan.
-2. **Pemantauan Berkala:** Menyelenggarakan pemantauan kondisi teknis, *reliability*, *availability*, *downtime*, dan tindakan mitigasi secara berkala.
-3. **Ekosistem Digital Terpadu:** Membangun sistem *digital maintenance* yang menghubungkan data aset, *work order*, *condition monitoring*, material, biaya, dan keputusan manajemen.
-4. **Adopsi AI Bertahap:** Mengembangkan analitik dan kecerdasan buatan (AI) secara bertahap berbasis kesiapan data, validasi lapangan, dan tata kelola model yang ketat.
-5. **Reduksi Kerusakan Berulang:** Mendukung perusahaan pelayaran, galangan, pelabuhan, pembangkit, pertambangan, dan industri proses dalam memangkas *unplanned downtime* dan *repeat failure*.
-6. **Pengembangan Kapasitas Nasional:** Mengembangkan tenaga ahli nasional melalui transfer pengetahuan, pelatihan, sertifikasi, dan riset terapan.
-7. **Integritas & Independensi:** Menjaga integritas data, keselamatan kerja, keamanan informasi, kualitas layanan, dan independensi rekomendasi teknis.
-
----
-
-## 💎 Nilai-Nilai Perusahaan (*Core Values*)
-
-- **Integrity:** Menjunjung tinggi kejujuran, menyampaikan fakta lapangan, keterbatasan metode, dan risiko secara terbuka.
-- **Reliability:** Mengutamakan konsistensi proses, ketertelusuran (*traceability*), ketepatan analisis, dan hasil yang dapat dipercaya.
-- **Innovation:** Menggunakan teknologi mutakhir untuk menyelesaikan permasalahan operasional yang nyata.
-- **Professionalism:** Bekerja berlandaskan kompetensi teknik, metode terstandar, etika profesi, dan keselamatan kerja.
-- **Excellence:** Mengedepankan mutu rekayasa, manfaat yang terukur, dan peningkatan berkelanjutan (*continuous improvement*).
-- **Sustainability:** Mendukung perpanjangan usia pakai aset, efisiensi sumber daya, dan operasional yang ramah lingkungan.
-- **Collaboration:** Memadukan keahlian pemeliharaan, operasi, rekayasa mesin/listrik, IT, dan manajemen untuk hasil terbaik.
-
----
-
-## ⚙️ 5 Lini Layanan Utama
-
-### 4.1 MRO and Reliability Engineering Consulting
-- *Maintenance maturity assessment* dan penyusunan peta jalan perbaikan (*improvement roadmap*).
-- Penetapan hierarki aset, penilaian kritikalitas (*Criticality Assessment*), RCM (*Reliability Centered Maintenance*), FMEA/FMECA, serta eliminasi *bad-actor* melalui RCA (*Root Cause Analysis*).
-- Strategi pemeliharaan, perencanaan (*planning*), penjadwalan (*scheduling*), manajemen *backlog*, *docking*, *shutdown*, dan analisis biaya daur hidup (*Lifecycle Cost Analysis*).
-- Kritikalitas suku cadang (*spare-parts criticality*), penyusunan *Bill of Materials* (BOM), dan analisis risiko inventaris.
-
-### 4.2 Marine MRO Consulting
-- Optimasi dan standarisasi *Planned Maintenance System* (PMS) armada kapal.
-- Evaluasi teknis *main engine*, *auxiliary engine*, propulsi, generator listrik, kemudi (*steering gear*), pompa, kompresor, dan mesin geladak.
-- Kesiapan *docking*, pengawasan ruang lingkup kerja (*job list*), *material readiness*, dan *closeout* galangan.
-- Dasbor pemeliharaan armada (*fleet dashboard*), *defect register*, dan pelacakan rekomendasi biro klasifikasi (audit readiness).
-
-### 4.3 Digital MRO and Asset Management
-- Seleksi, konfigurasi, implementasi, dan audit platform CMMS / EAM / PMS.
-- Digitalisasi *work order*, inspeksi keliling bergerak (*mobile inspection*), standarisasi taksonomi kegagalan (ISO 14224), dan tata kelola master data.
-- Integrasi sistem perawatan dengan ERP, SCADA, PLC, *data historian*, sensor IoT, dan platform *Business Intelligence* (BI).
-
-### 4.4 Condition Monitoring and Predictive Maintenance
-- Pemantauan getaran (*vibration analysis*), termografi inframerah, analisis pelumas/oli mesin, parameter proses, dan inspeksi kelistrikan.
-- Perancangan matriks alarm, penetapan *baseline*, alur kerja diagnostik, dan pemberian rekomendasi teknis (*technical advisory*).
-- Deteksi anomali dini, penentuan skor kesehatan aset (*Asset Health Index*), probabilitas kegagalan, dan estimasi sisa umur pakai (*Remaining Useful Life* - RUL).
-
-### 4.5 Managed Reliability Service
-- Pemantauan jarak jauh (*remote monitoring*) dan evaluasi kondisi permesinan secara berkala.
-- Penerbitan *Monthly Reliability Report*, *Quarterly Management Review*, dan laporan peningkatan tahunan.
-- Layanan notifikasi anomali kritis, bantuan diagnostik darurat, pelacakan tindakan korektif, dan konsultasi *on-call engineering*.
-
----
-
-## 🏭 Fokus Sektor Industri
-
-1. **Sektor Utama (Fokus Utama):**
-   - Perkapalan niaga & armada lepas pantai
-   - Operator pelayaran & logistik laut
-   - Galangan kapal (*shipyard* & *docking*)
-   - Pelabuhan & *marine services*
-2. **Sektor Terpilih:**
-   - Pembangkit tenaga listrik (*power plants*)
-   - Pertambangan mineral & batubara
-   - Manufaktur berat & industri proses kimia/minyak
-3. **Sektor Selektif:**
-   - Fasilitas industri lain yang memiliki peralatan berputar (*rotating equipment*) kritis dan kesiapan data yang memadai.
-
----
-
-## 📋 Acuan Standar Teknis & Kepatuhan
-
-- **ISO 55001:2024:** Sistem Manajemen Aset (*Asset Management Systems*)
-- **ISO 17359:2018:** Pemantauan Kondisi dan Diagnostik Mesin (*Condition Monitoring and Diagnostics of Machines*)
-- **ISO 14224:2016:** Pengumpulan Data Keandalan dan Pemeliharaan Peralatan Minyak, Gas, dan Petrokimia
-- **ISO 9001:2015:** Sistem Manajemen Mutu
-- **ISM Code & Aturan Klasifikasi:** Keselamatan Pengoperasian Kapal dan Pencegahan Pencemaran Laut
-
----
-
-## 💻 Tentang Mockup Interaktif Ini
-
-Repositori ini berisi mockup antarmuka web interaktif **PT Aegis Teknologi Nusantara** yang dibuat sebagai representasi mandiri dari aplikasi frontend resmi.
-
-### Fitur Unggulan Antarmuka:
-- **Responsive & Design Tokens:** Dibangun menggunakan palet warna resmi Aegis (Deep Navy `#001633`, Brand Primary `#002454`, Teal Accent `#00788F`, Cyan `#29A0B5`), tipografi display *Fraunces* dan body *IBM Plex Sans*.
-- **Dark & Light Mode:** Mendukung peralihan tema terang dan gelap dengan persistensi preferensi di peramban.
-- **Interactive Constellation Canvas:** Animasi grafis partikel konstelasi di area Hero (mode gelap) yang bereaksi terhadap pergerakan kursor mouse.
-- **Lab Interaktif Rekayasa:**
-  1. *Bedah Kapal (Ship Anatomy):* Blueprint SVG penampang kapal kargo dengan hotspot interaktif 5 sistem permesinan, mode sensor data, dan fitur tur otomatis.
-  2. *Simulator Getaran:* Visualisasi dinamis gelombang sinyal getaran (ISO 10816), simulasi beban vs keausan bearing, dan indikator *Asset Health Index*.
-  3. *Kalkulator Penghematan:* Simulasi estimasi penghematan biaya *unplanned downtime* dan biaya *docking* berbasis parameter operasi armada.
-- **Wawasan & Artikel:** Katalog artikel teknis pemeliharaan dengan filter kategori dan pencarian kata kunci.
-- **Formulir Konsultasi Realistis:** Formulir interaktif dengan validasi dan simulasi respon pengiriman.
-- **Zero-Dependency Runtime:** Berjalan langsung di peramban tanpa memerlukan runtime Node.js, framework compiler, atau server backend untuk presentasi klien.
-
----
-
-## 🚀 Panduan Menjalankan
-
-### Cara 1: Buka Langsung (Lokal)
-Cukup buka file `index.html` menggunakan peramban modern apa pun (Google Chrome, Microsoft Edge, Mozilla Firefox, atau Safari):
+**Directly**
 ```bash
-double-click index.html
+# just open the file
+start index.html          # Windows
+open  index.html          # macOS
 ```
 
-### Cara 2: Jalankan via Local Web Server
-Jika menggunakan VS Code Live Server atau Python HTTP server:
+**Via a local web server** (recommended — avoids any `file://` restrictions)
 ```bash
-# Menggunakan Python 3
-python -m http.server 3000
-
-# Atau menggunakan npx serve
-npx serve .
+python -m http.server 8000
+# then http://127.0.0.1:8000
 ```
-Lalu akses `http://localhost:3000` pada browser.
 
-### Cara 3: Deploy ke Vercel
-Mockup ini dapat langsung di-deploy ke Vercel dalam hitungan detik:
-1. Hubungkan repositori GitHub ini ke akun **Vercel**.
-2. Framework Preset: pilih **Other** (Static Site).
-3. Root Directory: `.` (karena `index.html` berada langsung di root repositori ini).
-4. Klik **Deploy**.
+**Deploying to Vercel / Netlify / any static host**
+Framework preset **Other**, root directory `.`, no build command, output `.`.
 
 ---
+
+## File layout
+
+| File | Role | Size |
+|:--|:--|--:|
+| `index.html` | All markup, all 9 views | ~186 KB |
+| `styles.css` | Design tokens, base type, primitives, header, footer, **utility shim** | ~66 KB |
+| `styles-app.css` | Page sections (hero → contact), sub-pages | ~42 KB |
+| `styles-lab.css` | The interactive `/lab` view | ~25 KB |
+| `enhance.js` | Carousel, scroll reveal, service figure | ~13 KB |
+| `app.js` | Application logic — **unchanged from the previous build** | ~88 KB |
+| `assets/` | Brand assets and photography | ~1.3 MB |
+
+### Why three stylesheets
+
+They load in cascade order and are deliberately layered:
+
+1. **`styles.css`** owns the token contract. Every colour, space, radius,
+   duration and type step is declared here once.
+2. **`styles-app.css`** composes those tokens into sections.
+3. **`styles-lab.css`** is scoped to one route. The ship blueprint, the
+   simulator trace and the calculator bars are intricate, known-good code;
+   keeping them in their own layer means editing a marketing section can never
+   disturb them.
+
+### The utility shim
+
+The previous build loaded the **Tailwind Play CDN**, which compiled CSS in the
+browser at runtime — roughly 380 KB of parser shipped to every visitor, with a
+render-blocking compile on each load.
+
+`app.js` injects markup carrying Tailwind class names and toggles a few of them
+at runtime, so those names are a real contract. Section 13 of `styles.css`
+restates every class the page and `app.js` actually use as ordinary static CSS.
+The CDN is gone; the contract is intact.
+
+---
+
+## Architecture notes
+
+### The router contract
+
+`app.js` is an SPA with hash routing. It shows and hides views by writing
+**inline `display`** on every element carrying the `page-view` class:
+
+```js
+document.querySelectorAll(".page-view").forEach(el => { el.style.display = "none"; });
+document.getElementById(targetViewId).style.display = "block";
+```
+
+Three consequences, all load-bearing:
+
+- Every top-level view **must** keep `class="page-view"`, and its `id`.
+- Display is forced to `block`, never `flex` or `grid`. Any view needing a flex
+  layout gets it from an inner wrapper.
+- `#header-drawer` detects its open state by reading
+  `drawer.style.display === "block"`, so that element must start as
+  `style="display: none;"` and must never express state via a class.
+
+### Three constraints `app.js` imposes on the CSS
+
+These are not stylistic choices; violating them breaks behaviour.
+
+1. **Views are toggled by inline `display`.** `app.js` sets
+   `el.style.display = "block"` on the active `.page-view`. Inline styles
+   outrank class rules, so a view whose layout depends on `display: grid` or
+   `flex` must get that from an inner wrapper.
+
+2. **Any element whose spacing `app.js` might reset must not rely on a `gap`
+   inside the switched element.** The hero instrument panel is the live
+   example: `app.js` writes `display: block` on it when switching tabs, which
+   discards a `grid` + `gap` layout and collapses the rows together *after the
+   first click*. The row spacing therefore lives on the children's own margins,
+   which survive any `display` value. If you add rows there, keep using margins.
+
+3. **Tab state must be expressed as classes, never inline styles.** `app.js`
+   switches the hero tabs by adding and removing four literal class names. The
+   initial state is carried by those same classes in the markup. Pinning it in
+   a `style` attribute would freeze the tabs permanently, because the inline
+   declaration would outrank every class toggle.
+
+### `enhance.js`
+
+Adds what the original build lacked, without touching `app.js`:
+
+- **Scroll reveal.** In the previous build all eight `.reveal` elements were
+  hardcoded `is-visible`, so nothing ever animated. Real `IntersectionObserver`
+  now reveals them, with anything above the fold shown immediately on load.
+- **Portfolio carousel.** Five slides with prev/next, dots, thumbnails, a live
+  counter, keyboard arrows, touch swipe, and autoplay that pauses on hover,
+  focus, tab-hidden and off-screen. Under `prefers-reduced-motion` it never
+  autoplays. Every control is a real `<button>` with an `aria-label`.
+- **Service figure.** `app.js` swaps the service panel's text; `enhance.js`
+  mirrors that onto the panel photograph with a caption per service.
+
+### Design system
+
+Tokens live in `:root` in `styles.css`. Highlights:
+
+```css
+--navy-700: #002454;   /* brand primary, from the client's own logo */
+--teal-600: #00788f;   /* brand accent */
+--cyan-400: #29a0b5;   /* accent on dark */
+--r: 4px;              /* near-square: technical, not friendly */
+--fs-mega … --fs-2xs;  /* one type scale, fluid via clamp() */
+```
+
+Type is **Fraunces** for display and **IBM Plex Sans / Mono** for body and
+figures. The mono face is used where the content is genuinely data — ISO codes,
+asset counts, measurements — not as decoration.
+
+Every colour role is theme-aware. The dark theme overrides the same variables,
+so no component needs a dark-specific rule.
+
+---
+
+## Content integrity
+
+This is a mockup for a real company, so the content rules were strict:
+
+- **Nothing invented.** Every company fact comes from the client's own
+  company-profile document. Where the source had no data — testimonials,
+  project references, client logos — the section either omits it or carries a
+  visible placeholder notice.
+- **Standard statuses are stated honestly.** The standards register
+  distinguishes *metodologi*, *kompetensi personel* and *target pengembangan*.
+  It does not imply certification the company does not hold.
+- **Statistics are counts of real things** (5 service lines, 7 values, 10
+  standards, 13 KBLI codes), not performance claims.
+- **The calculator is labelled an estimate.** Its own disclaimer says the
+  figures are engineering benchmarks, not a guarantee.
+- **Photography is the client's own.** All plates are cut from the
+  `COMPANY PROFILE` cover in `_source/`. No stock imagery was introduced. See
+  `assets/MANIFEST.md` for the provenance and resolution limits of each image —
+  several are low-resolution crops and are used at small sizes for that reason.
+
+---
+
+## Measured results
+
+Every number below was produced by running the page in Chrome and reading
+computed styles, geometry or pixels — not by inspecting the source.
+
+| Check | Result | How |
+|:--|:--|:--|
+| Console errors | **0** | 9 routes × 4 viewports, plus 5 routes × 2 more |
+| Failed requests | **0** | 9 routes × 4 viewports |
+| Horizontal overflow | **0** | all 6 widths, 390 → 1920 |
+| Tap targets under 32 px | **0** | 390 px viewport |
+| Functional assertions | **73/73** | `_ops/shot/redesign-functional.mjs` |
+| Fix-regression guards | **15/15** | `_ops/shot/verify-fix-guards.mjs` |
+| Accessibility assertions | **15/15** | `_ops/shot/redesign-a11y.mjs` |
+| Contrast, light + dark | **54/54 AA** | computed `color` vs resolved background |
+| Blueprint hotspots grow in place | **0.0 px drift, 1.30×** | `_ops/shot/verify-hotspot.mjs` |
+| Hull renders visible + graded | **+28 / +14 lum** | `_ops/redesign/verify_hull2.py` |
+| Opens from `file://` as documented | **identical to http://** | `_ops/shot/verify-file-protocol.mjs` |
+
+Widths covered: **390, 768, 1024, 1280, 1440, 1920**. The 9-route sweep runs at
+390/768/1280/1440; 1024 and 1920 are covered by a separate 5-route sweep
+(`redesign-review.mjs` and case F of `verify-fix-guards.mjs` respectively).
+
+Performance on the home route: `DOMContentLoaded` 367 ms, `load` 782 ms,
+~1.37 MB transferred, one long task of 61 ms.
+
+### Tests carry controls where a false pass was plausible
+
+Two guards include a deliberately-broken control, because a test that cannot
+fail is not evidence:
+
+- **Hotspot geometry.** Neutralising the fix with the original
+  `transform-box: view-box` reproduces a **48.3 px** displacement, confirming
+  the measurement can detect the defect it is guarding against.
+- **Hull gradient.** Forcing a flat fill makes the same sampling report
+  **0.0 lum** difference, confirming it distinguishes a gradient from a block.
+
+Keyboard support: the skip link is the first tab stop, every control has a
+visible focus ring, the service tablist implements roving `tabindex` with
+arrow-key navigation, and the carousel responds to arrow keys.
+
+---
+
+## Known limitations
+
+0. **`assets/motif-map.png` has changed colour twice.** Two different
+   generation passes authored its ink differently — one pale ice `(205,230,242)`,
+   one navy `(0,36,84)`. Only the *alpha channel* has been consistent, and it is
+   the good part of the asset. `styles.css` therefore renders it with
+   `mask-image` and takes the colour from CSS, so it is correct either way. **Do
+   not convert that rule back to `background-image`** — a plain background
+   paints the PNG's own RGB, and navy ink on the navy `.section--navy` band is
+   invisible (measured: 0.00% of pixels differed from the panel). Guard G in
+   `_ops/shot/verify-fix-guards.mjs` fails if this is reverted.
+
+1. **Photography is low-resolution.** The source cover is 1055 × 1491 px. Six
+   plates come from it; five have a native long side under 458 px and sit at the
+   1.4× upscale cap (407→570, 335→469, 347→486, 308→431, 410→574), so they
+   cannot reach 640 px without exceeding that cap. `photo-vessel.jpg` also
+   carries roughly 42% translucent design haze from the source composite — a
+   smaller 220×190 alternative exists if the haze is unacceptable. Replace with
+   real facility photography before launch.
+2. **The design is a mockup, not a deployment.** There is no `robots.txt`, no
+   sitemap generator and no analytics.
+3. **The contact form simulates submission** (`app.js` fakes it after 900 ms).
+   Wire it to the backend before launch.
+4. **Social links in the footer point at placeholder URLs.** Replace with the
+   company's real accounts, or remove them.
+5. **Testimonials are placeholders**, flagged as such on the page itself.
+6. **`assets/favicon.svg` is intentionally unreferenced** — it is a generic
+   shield placeholder for the CMS template, superseded here by the real brand
+   mark at `assets/favicon.png`. Do not delete it; the backend seed script and
+   the CMS template still use it.
+7. **The blueprint panel stays dark in both themes** because the ship SVG
+   carries literal `rgba()` strokes. It is a deliberate "instrument" treatment,
+   not a theming bug.
+
+---
+
+## Verified routes
+
+| Hash | View |
+|:--|:--|
+| `#/` | Home |
+| `#/profil` | Company profile, identity, board, values, missions |
+| `#/layanan` | All five service lines with their full scope lists |
+| `#/lab` | Interactive lab: ship anatomy, failure simulator, savings calculator |
+| `#/artikel` | Article index with search and category filters |
+| `#/artikel/:slug` | Article detail |
+| `#/legal/:slug` | Privacy policy / terms |
+| `#/panel-aegis-7f3c` | Demo sign-in (no authentication) |
+| anything else | 404 |
+
+Anchors work in every documented form: `#contact`, `#/contact`, `#/#contact`.
 
 <p align="center">
   <b>PT Aegis Teknologi Nusantara</b><br>
   <i>From Research to Real Solutions</i><br>
-  © 2026 PT Aegis Teknologi Nusantara. Seluruh hak cipta dilindungi undang-undang.
+  © 2026 PT Aegis Teknologi Nusantara. Seluruh hak dilindungi undang-undang.
 </p>

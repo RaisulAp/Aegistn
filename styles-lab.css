@@ -1,0 +1,1072 @@
+
+/* ============================================================================
+   1. LAB SHELL & PANELS
+   ========================================================================== */
+.lab {
+    --lab-ok: #34d399;
+    --lab-watch: #fbbf24;
+    --lab-crit: #f87171;
+    overflow-x: clip;
+}
+
+.lab-panel {
+    --sec-fg: var(--on-deep);
+    --sec-fg-muted: var(--on-deep-soft);
+    --sec-fg-faint: var(--on-deep-soft);
+    --sec-line: var(--line-on-deep);
+    --sec-accent: var(--brand-accent-on-dark);
+    --lab-track-off: color-mix(in srgb, var(--on-deep) 18%, transparent);
+    --lab-track-on: var(--brand-accent-on-dark);
+    --lab-thumb: var(--on-deep);
+    position: relative;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-line);
+    border-radius: var(--r);
+    color: var(--on-deep);
+}
+
+.lab-card {
+    --lab-track-off: var(--line-strong);
+    --lab-track-on: var(--brand-accent);
+    --lab-thumb: var(--bg);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: clamp(22px, 3vw, 32px);
+    color: var(--ink);
+}
+
+:root[data-theme="dark"] .lab-card {
+    --sec-accent: var(--brand-accent-on-dark);
+    --lab-track-on: var(--brand-accent-on-dark);
+    --lab-thumb: var(--ink);
+}
+
+.lab-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--sec-accent, var(--brand-accent));
+}
+
+.lab-label {
+    margin: 24px 0 8px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-kicker);
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.lab-note {
+    margin-top: 12px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    line-height: 1.5;
+    color: var(--ink-soft);
+}
+
+.lab-toggle,
+.lab-scn,
+.lab-pick {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid var(--panel-line);
+    border-radius: var(--r-pill);
+    background: transparent;
+    color: var(--on-deep);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    transition: background-color var(--dur-1) var(--ease-out), border-color var(--dur-1) var(--ease-out), transform var(--dur-1) var(--ease-out);
+}
+
+.lab-toggle:hover,
+.lab-scn:hover {
+    border-color: var(--on-deep-soft);
+    transform: translateY(-1px);
+}
+
+.lab-toggle[aria-pressed="true"],
+.lab-scn[aria-pressed="true"] {
+    border-color: var(--brand-accent-on-dark);
+    background: color-mix(in srgb, var(--brand-accent-on-dark) 22%, transparent);
+}
+
+.lab-toggle__dot {
+    inline-size: 8px;
+    block-size: 8px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+}
+
+.lab-toggle[aria-pressed="true"] .lab-toggle__dot {
+    background: var(--brand-accent-on-dark);
+    border-color: var(--brand-accent-on-dark);
+}
+
+.lab-hero {
+    overflow: hidden;
+    padding-block: clamp(72px, 10vw, 128px) clamp(56px, 7vw, 88px);
+}
+
+.lab-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    mask-image: radial-gradient(ellipse 80% 90% at 25% 30%, black 15%, transparent 75%);
+}
+
+.lab-hero__sonar {
+    position: absolute;
+    top: 46%;
+    right: -140px;
+    inline-size: 560px;
+    block-size: 560px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.lab-hero__sonar i {
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--brand-accent-on-dark);
+    border-radius: 50%;
+    opacity: 0;
+    animation: lab-sonar 7s var(--ease-out) infinite;
+}
+
+.lab-hero__sonar i:nth-child(2) {
+    animation-delay: 2.3s;
+}
+
+.lab-hero__sonar i:nth-child(3) {
+    animation-delay: 4.6s;
+}
+
+.lab-steps {
+    display: grid;
+    gap: 14px;
+    margin-top: clamp(36px, 5vw, 56px);
+}
+
+@media (min-width: 820px) {
+    .lab-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+.lab-step {
+    position: relative;
+    display: grid;
+    gap: 4px;
+    inline-size: 100%;
+    height: 100%;
+    padding: 20px 52px 20px 20px;
+    border: 1px solid var(--line-on-deep);
+    border-radius: var(--r);
+    background: var(--card-bg-deep);
+    text-align: left;
+    color: var(--on-deep);
+    cursor: pointer;
+    transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), background-color var(--dur-2) var(--ease-out);
+}
+
+.lab-step:hover {
+    transform: translateY(-3px);
+    border-color: var(--brand-accent-on-dark);
+    background: color-mix(in srgb, var(--brand-accent-on-dark) 10%, transparent);
+}
+
+.lab-step__n {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: var(--ls-mono);
+    color: var(--brand-accent-on-dark);
+}
+
+.lab-step__t {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    line-height: 1.25;
+}
+
+.lab-step__d {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    line-height: 1.5;
+    color: var(--on-deep-soft);
+}
+
+.lab-step__arrow {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    color: var(--brand-accent-on-dark);
+    transition: transform var(--dur-2) var(--ease-out);
+}
+
+.lab-step:hover .lab-step__arrow {
+    transform: translateY(4px);
+}
+
+/* ============================================================================
+   2. SHIP ANATOMY (Bedah Kapal)
+   ========================================================================== */
+.lab-blueprint {
+    overflow: hidden;
+}
+
+.lab-blueprint__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--panel-line);
+}
+
+.lab-ship {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    /* The blueprint paints its own dark stage and uses literal rgba() strokes,
+       so it only reads correctly on a dark surface — which is why the panel
+       stays dark in both themes. */
+    --lab-hull-top: color-mix(in srgb, var(--on-deep) 32%, var(--panel-bg-2));
+    --lab-hull-bottom: var(--panel-bg-2);
+}
+
+.lab-ship__deckline {
+    stroke: var(--brand-accent-on-dark);
+    stroke-width: 2;
+}
+
+.lab-ship__glass {
+    fill: var(--brand-graph);
+    opacity: 0.55;
+}
+
+.lab-ship__stripe {
+    fill: var(--brand-accent-on-dark);
+}
+
+.lab-ship__hl {
+    fill: color-mix(in srgb, var(--brand-accent-on-dark) 14%, transparent);
+    stroke: var(--brand-accent-on-dark);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 4;
+}
+
+.lab-hotspot {
+    cursor: pointer;
+}
+
+.lab-hotspot__dot {
+    fill: var(--brand-accent-on-dark);
+    stroke: var(--panel-bg);
+    stroke-width: 2;
+    /* SVG transforms default to the user-space origin, so a bare scale() slides
+       the circle across the drawing instead of growing it in place. fill-box
+       pins the transform to the element's own box. */
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform var(--dur-2) var(--ease-out), fill var(--dur-2) var(--ease-out);
+}
+
+.lab-hotspot[data-on="true"] .lab-hotspot__dot {
+    transform: scale(1.3);
+    fill: var(--on-deep);
+}
+
+.lab-hotspot__num {
+    fill: var(--brand-primary);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.lab-spark {
+    inline-size: 88px;
+    block-size: 22px;
+}
+
+.lab-spark__base {
+    stroke: var(--brand-accent);
+    stroke-width: 1.4;
+    opacity: 0.3;
+    fill: none;
+}
+
+.lab-spark__scan {
+    stroke: var(--brand-accent);
+    stroke-width: 1.9;
+    stroke-dasharray: 24 76;
+    fill: none;
+    animation: lab-scan 2.6s linear infinite;
+}
+
+:root[data-theme="dark"] .lab-spark__base,
+:root[data-theme="dark"] .lab-spark__scan {
+    stroke: var(--brand-accent-on-dark);
+}
+
+/* ============================================================================
+   3. FAILURE SIMULATOR
+   ========================================================================== */
+.lab-sim {
+    --tone: var(--lab-ok);
+    display: grid;
+    gap: 24px;
+}
+
+.lab-sim[data-tone="watch"] {
+    --tone: var(--lab-watch);
+}
+
+.lab-sim[data-tone="crit"] {
+    --tone: var(--lab-crit);
+}
+
+@media (min-width: 1024px) {
+    .lab-sim {
+        grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+        gap: 28px;
+    }
+}
+
+.lab-sim__value {
+    margin-top: 10px;
+    font-family: var(--font-display);
+    font-size: clamp(38px, 5vw, 54px);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--tone);
+    font-variant-numeric: tabular-nums;
+    transition: color var(--dur-3) var(--ease-out);
+}
+
+.lab-gauge {
+    position: relative;
+    max-inline-size: 250px;
+    margin-inline: auto;
+}
+
+.lab-gauge__track {
+    fill: none;
+    stroke-width: 14;
+    stroke-linecap: round;
+    stroke: color-mix(in srgb, var(--on-deep) 14%, transparent);
+}
+
+.lab-gauge__fill {
+    fill: none;
+    stroke-width: 14;
+    stroke-linecap: round;
+    stroke: var(--tone);
+    transition: stroke var(--dur-3) var(--ease-out);
+}
+
+.lab-gauge__read {
+    position: absolute;
+    inset: auto 0 4px 0;
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+}
+
+.lab-gauge__num {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--tone);
+}
+
+.lab-gauge__cap {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--on-deep-soft);
+}
+
+/* ============================================================================
+   4. SAVINGS CALCULATOR
+   ========================================================================== */
+.lab-calc__total {
+    margin: 10px 0 22px;
+    font-family: var(--font-display);
+    font-size: clamp(2.3rem, 5.6vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--on-deep);
+    font-variant-numeric: tabular-nums;
+}
+
+.lab-split {
+    display: flex;
+    gap: 3px;
+    block-size: 10px;
+}
+
+.lab-split i,
+.lab-split b {
+    display: block;
+    border-radius: var(--r-pill);
+    transition: width var(--dur-3) var(--ease-out);
+}
+
+.lab-split i {
+    background: var(--brand-accent-on-dark);
+}
+
+.lab-split b {
+    background: var(--on-deep-soft);
+}
+
+.lab-compare__row {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr) minmax(96px, auto);
+    align-items: center;
+    gap: 10px;
+    padding: 3px 0;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--on-deep-soft);
+}
+
+.lab-compare__track {
+    block-size: 8px;
+    border-radius: var(--r-pill);
+    background: color-mix(in srgb, var(--on-deep) 10%, transparent);
+    overflow: hidden;
+}
+
+.lab-compare__track i {
+    display: block;
+    block-size: 100%;
+    border-radius: var(--r-pill);
+    background: color-mix(in srgb, var(--on-deep-soft) 60%, transparent);
+    transition: width var(--dur-3) var(--ease-out);
+}
+
+.lab-compare__row--pot .lab-compare__track i {
+    background: var(--brand-accent-on-dark);
+}
+
+/* ============================================================================
+   5. RANGE INPUTS
+   ========================================================================== */
+.lab-slider input[type="range"],
+.lab-field input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    inline-size: 100%;
+    block-size: 30px;
+    margin: 4px 0 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.lab-slider input[type="range"]::-webkit-slider-runnable-track,
+.lab-field input[type="range"]::-webkit-slider-runnable-track {
+    block-size: 6px;
+    border-radius: var(--r-pill);
+    background: linear-gradient(to right, var(--lab-track-on) var(--p, 50%), var(--lab-track-off) var(--p, 50%));
+}
+
+.lab-slider input[type="range"]::-webkit-slider-thumb,
+.lab-field input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    inline-size: 22px;
+    block-size: 22px;
+    margin-top: -8px;
+    border: 3px solid var(--lab-track-on);
+    border-radius: 50%;
+    background: var(--lab-thumb);
+    box-shadow: var(--sh-sm);
+    transition: transform var(--dur-1) var(--ease-out);
+}
+
+/* ============================================================================
+   6. LAB PANEL INTERNALS
+   --------------------------------------------------------------------------
+   These classes exist only in the lab markup. In the previous build they were
+   satisfied by the in-browser Tailwind compiler; here they are stated once, in
+   the lab's own vocabulary, so the view needs no utility framework.
+
+   NAMING NOTE: `.lab-split` is the calculator's 10px split bar and belongs to
+   the proven rules above. The two-column wrapper for the ship and calculator
+   sections is `.lab-columns` — do not reuse `.lab-split` for it.
+   ========================================================================== */
+
+/* ---- Two-column lab sections -------------------------------------------- */
+
+.lab-columns {
+    display: grid;
+    gap: clamp(20px, 2.4vw, 32px);
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .lab-columns { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); }
+}
+
+/* ---- Hero ---------------------------------------------------------------- */
+
+.lab-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.lab-hero__lead {
+    margin-top: var(--space-5);
+    max-width: 62ch;
+    font-size: var(--fs-md);
+    line-height: 1.66;
+    color: var(--on-deep-soft);
+}
+
+.lab-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+    margin-top: var(--space-10);
+}
+
+.lab-step {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid var(--line-on-deep);
+    border-radius: var(--r);
+    background-color: rgb(255 255 255 / 0.03);
+    color: var(--on-deep);
+    transition:
+        border-color var(--dur-2) var(--ease-out),
+        background-color var(--dur-2) var(--ease-out),
+        transform var(--dur-2) var(--ease-out);
+}
+
+.lab-step__n {
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+    letter-spacing: var(--ls-mono);
+    color: var(--brand-accent-on-dark);
+    font-variant-numeric: tabular-nums;
+}
+
+.lab-step__t {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+
+.lab-step__d {
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    color: var(--on-deep-soft);
+}
+
+/* ---- Blueprint bar & toggles -------------------------------------------- */
+
+.lab-blueprint__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--panel-line);
+}
+
+.lab-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.lab-ship__ruler path {
+    fill: none;
+    stroke-width: 1;
+}
+
+.lab-blueprint__stage {
+    padding: clamp(10px, 1.6vw, 20px);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.lab-compare + .lab-compare { margin-top: var(--space-5); }
+
+.lab-ship__pins {
+    transition: opacity var(--dur-3) var(--ease-out);
+}
+
+/* ---- Ship detail list ---------------------------------------------------- */
+
+.lab-sensors {
+    display: grid;
+    gap: 9px;
+}
+
+.lab-sensors li {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) 84px;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--line);
+}
+
+.lab-sensors li:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.lab-code {
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--sec-accent);
+}
+
+.lab-sensors__name {
+    font-size: var(--fs-xs);
+    line-height: 1.45;
+    color: var(--ink-soft);
+}
+
+.lab-spark { display: block; width: 100%; height: 24px; }
+
+.lab-spark__base {
+    fill: none;
+    stroke: var(--line-strong);
+    stroke-width: 1.5;
+}
+
+.lab-spark__scan {
+    fill: none;
+    stroke: var(--sec-accent);
+    stroke-width: 1.5;
+    stroke-dasharray: 24 76;
+    animation: lab-scan 2.6s linear infinite;
+}
+
+.lab-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.lab-chips li {
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    background-color: transparent;
+    font-size: var(--fs-2xs);
+    line-height: 1.5;
+    color: var(--ink-mute);
+}
+
+.lab-service {
+    padding: 14px 16px;
+    border-left: 2px solid var(--sec-accent);
+    background-color: color-mix(in srgb, var(--sec-accent) 6%, transparent);
+    border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
+.lab-detail__role {
+    font-size: var(--fs-xs);
+    line-height: 1.55;
+    color: var(--ink-mute);
+}
+
+.lab-pick__n {
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+    color: var(--sec-accent);
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- Simulator ----------------------------------------------------------- */
+
+.lab-sim {
+    display: grid;
+    gap: var(--space-5);
+}
+
+@media (min-width: 1040px) {
+    .lab-sim { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); }
+}
+
+.lab-sim__chart,
+.lab-sim__health,
+.lab-sim__controls { padding: clamp(18px, 2.2vw, 26px); }
+
+.lab-sim__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.lab-sim__side {
+    display: grid;
+    gap: var(--space-5);
+    align-content: start;
+}
+
+.lab-trace {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: var(--space-2);
+    border-radius: var(--r-sm);
+    background-color: rgb(0 0 0 / 0.22);
+}
+
+/* Secondary readouts: label above value, in equal columns. */
+.lab-readouts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--panel-line);
+}
+
+.lab-readouts dt {
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--on-deep-soft);
+    line-height: 1.4;
+}
+
+.lab-readouts dd {
+    margin: 6px 0 0;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--sec-fg);
+    line-height: 1.25;
+    font-variant-numeric: tabular-nums;
+}
+
+.lab-trace__line {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke var(--dur-3) var(--ease-out);
+}
+
+.lab-trace__dot {
+    fill: var(--tone);
+    transition: fill var(--dur-3) var(--ease-out);
+}
+
+.lab-zone--ok { fill: rgb(20 130 90 / 0.09); }
+.lab-zone--watch { fill: rgb(180 119 15 / 0.09); }
+.lab-zone--warn { fill: rgb(214 168 74 / 0.11); }
+.lab-zone--crit { fill: rgb(192 54 75 / 0.13); }
+
+.lab-alarm {
+    stroke: rgb(251 191 36 / 0.75);
+    stroke-width: 1.5;
+    stroke-dasharray: 7 6;
+}
+
+.lab-alarm__label {
+    fill: #fbbf24;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+.lab-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--space-4);
+    padding: 6px 12px;
+    border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent);
+    border-radius: var(--r-pill);
+    background-color: color-mix(in srgb, var(--tone) 12%, transparent);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--sec-fg);
+}
+
+.lab-status > span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--tone);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--tone) 22%, transparent);
+}
+
+.lab-advice {
+    margin-top: var(--space-4);
+    font-size: var(--fs-xs);
+    line-height: 1.6;
+    color: var(--sec-fg-muted);
+    text-wrap: pretty;
+}
+
+.lab-slider__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--sec-fg);
+}
+
+.lab-slider__head output {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--tone);
+    font-variant-numeric: tabular-nums;
+}
+
+.lab-slider__ends {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: 2px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    color: var(--sec-fg-faint);
+}
+
+.lab-scenarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+/* ---- Calculator ---------------------------------------------------------- */
+
+.lab-calc__inputs { align-self: start; }
+
+.lab-calc__inputs .lab-field + .lab-field {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--line);
+}
+
+.lab-calc__result {
+    align-self: start;
+    padding: clamp(20px, 2.6vw, 30px);
+}
+
+.lab-calc__cta {
+    width: 100%;
+    margin-top: var(--space-6);
+    text-align: center;
+}
+
+.lab-field__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--sec-fg);
+}
+
+.lab-field__num {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex: none;
+}
+
+.lab-field__num input {
+    width: 92px;
+    padding: 7px 10px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.lab-field__num input:focus {
+    border-color: var(--brand-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-accent) 18%, transparent);
+    outline: none;
+}
+
+.lab-field__num span {
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    color: var(--sec-fg-faint);
+    white-space: nowrap;
+}
+
+.lab-field__hint {
+    margin-top: 8px;
+    font-size: var(--fs-xs);
+    line-height: 1.55;
+    color: var(--sec-fg-faint);
+    max-width: 52ch;
+}
+
+.lab-split__legend {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+}
+
+@media (min-width: 560px) {
+    .lab-split__legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.lab-split__legend > div {
+    display: grid;
+    grid-template-columns: 12px minmax(0, 1fr);
+    gap: 11px;
+    align-items: start;
+}
+
+.lab-split__legend dt {
+    font-size: var(--fs-xs);
+    color: var(--sec-fg-muted);
+    line-height: 1.45;
+}
+
+.lab-split__legend dd {
+    margin: 3px 0 0;
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--sec-fg);
+    font-variant-numeric: tabular-nums;
+}
+
+.lab-split__key {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+    border-radius: 2px;
+}
+
+.lab-split__key--a { background-color: var(--brand-accent-on-dark); }
+.lab-split__key--b { background-color: color-mix(in srgb, var(--on-deep-soft) 60%, transparent); }
+
+.lab-compares {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--panel-line);
+}
+
+.lab-compare__title {
+    margin-bottom: 11px;
+    font-family: var(--font-mono);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+    letter-spacing: var(--ls-mono);
+    text-transform: uppercase;
+    color: var(--on-deep-soft);
+}
+
+.lab-disclaimer {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 12px;
+    margin-top: var(--space-6);
+    padding: 14px 16px;
+    border: 1px solid color-mix(in srgb, var(--signal-watch) 34%, transparent);
+    border-radius: var(--r-sm);
+    background-color: color-mix(in srgb, var(--signal-watch) 8%, transparent);
+    color: var(--signal-watch-soft);
+}
+
+.lab-disclaimer svg { flex: none; margin-top: 2px; }
+
+.lab-disclaimer p {
+    font-size: var(--fs-xs);
+    line-height: 1.6;
+    color: var(--sec-fg-muted);
+}
+
+/* ---- Closing band -------------------------------------------------------- */
+
+.lab-close__inner {
+    display: grid;
+    gap: var(--space-7);
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .lab-close__inner { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+.lab-close .lead { margin-top: var(--space-4); max-width: 56ch; }
+
+/* ============================================================================
+   7. LAB RESPONSIVE RULES
+   ========================================================================== */
+
+@media (max-width: 1039px) {
+    .lab-sim__chart { order: 1; }
+    .lab-sim__side { order: 2; }
+}
+
+@media (max-width: 900px) {
+    .lab-steps { grid-template-columns: minmax(0, 1fr); }
+    .lab-step__arrow { display: none; }
+}
+
+@media (max-width: 640px) {
+    .lab-hero__title { font-size: 1.95rem; }
+    .lab-readouts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lab-field__head { flex-wrap: wrap; }
+    .lab-sensors li { grid-template-columns: 46px minmax(0, 1fr); }
+    .lab-spark { display: none; }
+}
+
+/* ============================================================================
+   8. LAB MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .lab-spark__scan { animation: none; stroke-dasharray: none; }
+    .lab-hotspot__pulse { animation: none; }
+    .lab-hero__sonar i { animation: none; }
+}
